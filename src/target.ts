@@ -48,10 +48,7 @@ export class FileSystemWritableFileStreamTarget extends Target {
 		public options?: { chunkSize?: number }
 	) {
 		super();
-
-		if (!(stream instanceof FileSystemWritableFileStream)) {
-			throw new TypeError('FileSystemWritableFileStreamTarget requires a FileSystemWritableFileStream instance.');
-		}
+		
 		if (options !== undefined && typeof options !== 'object') {
 			throw new TypeError("FileSystemWritableFileStreamTarget's options, when provided, must be an object.");
 		}
